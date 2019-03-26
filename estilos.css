@@ -45,19 +45,20 @@ select{
 	background: #dfe6f2;
 }
 table{
-	padding: 5% 5%;
+	max-width: 90%;
 }
 .tabla{
 	font-family: 'Nunito', sans-serif;
 	position: relative;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+}
+tr{
+	width: 100%;
 }
 td, th {
   border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
+  text-align: center;
+  padding: 5px;
 }
 tr:nth-child(even) {
   background-color: #dddddd;
@@ -68,11 +69,5 @@ footer{
 	background-color: #010101;
 }
 @media screen (max-width: 902px) {
-	header {
-		min-height: 640px;
-	}
-	.imagen_header{
-		min-height: 640px;
-		background-image: url(182637.jpg);
-	}
+
 }
