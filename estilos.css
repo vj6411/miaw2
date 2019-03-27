@@ -14,8 +14,7 @@ img{
 div img{
 	width: 100%;
 	height: 100%;
-	position: fixed;
-	z-index: 0;
+
 	display: none;
 }
 .contenedor{
@@ -37,7 +36,8 @@ div img{
 
 	grid-column: 1/2;
 	margin-left: 20px;
-	grid-row: 3;
+	grid-row: 3/5;
+	width: 50%;
 	height: 750px;
 }
 .contenedor .footer{
@@ -86,10 +86,6 @@ section{
 	height: 100%;
 	position: absolute;
 }
-table{
-	max-width: 90%;
-	display: block;
-}
 .tabla{
 	margin-top: 30%;
 	font-family: 'Nunito', sans-serif;
@@ -121,6 +117,9 @@ tr{
 	}
 	.tabla{
 		margin-top: 55%;
+		position: relative;
+		overflow-x: scroll;
+		overflow-y: hidden; 
 	}
 	tr{
   	background-color: #fff;
