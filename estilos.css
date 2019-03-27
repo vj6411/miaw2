@@ -2,55 +2,100 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	max-width: 1366px;
+	max-height: 700px;
 }
+img{	
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 0;
+}
+div img{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 0;
+	display: none;
+}
+.contenedor{
+	width: 100%;
+	min-width: 300px;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat (8, auto);
+}
+.contenedor .header{
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 20px;
+	grid-column: span 4;
+	grid-row: 1/4;
+}
+.contenedor .contenido{
 
-header{
-	width: 100%;
-	height: 100%;
+	grid-column: 1/2;
+	margin-left: 20px;
+	grid-row: 3;
+	height: 750px;
 }
-.imagen_header{
-	position: relative;
+.contenedor .footer{
 	width: 100%;
-	height: 100%;
+	height: 100px;
+	position: relative;
+	background-color: #0b0a13;
+	color: white;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	grid-column-start: 1;
+	grid-column-end: 16;
+	grid-row-start: 16;
+	grid-row-end: 16;
 }
 .formulario{
 	font-family: 'Nunito', sans-serif;
-	position: absolute;
-	top:5%;
-	left: 5%;
 	background-color:#B09DB9;
-	padding: 3%;
+	padding: 10px;
 	border-radius: 7px;
-	display: inline-table;
-	max-height: 590px;
-	width: 20%;
+	width: 40%;
 }
+
 input{
-	margin-bottom: 15px;
-	padding:2px 30px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	border-radius: 5px;
+	margin-bottom: 2%;
+	margin-right: 2%;
+	padding: 1%;
+	width: 100%;
 }
 select{
-	margin-bottom: 15px;
-	padding:2px 30px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	border-radius: 5px;
+	margin-bottom: 2%;
+	margin-right: 2%;
+	padding: 1%;
+	width: 100%;
 }
 .enviar{
 	background: #dfe6f2;
 }
+
+section{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
 table{
 	max-width: 90%;
+	display: block;
 }
 .tabla{
+	margin-top: 30%;
 	font-family: 'Nunito', sans-serif;
-	position: relative;
-	display: flex;
+	position: absolute;
+	float: center;
+	padding-top: 100px;
 }
 tr{
 	width: 100%;
@@ -60,14 +105,25 @@ td, th {
   text-align: center;
   padding: 5px;
 }
-tr:nth-child(even) {
-  background-color: #dddddd;
+tr{
+  background-color: #fff;
 }
-footer{
-	width: 100%;
-	height: 100px;
-	background-color: #010101;
-}
-@media screen (max-width: 902px) {
+@media (max-width: 425px) {
+	img{
+		display: none;
+	}
+	div img {
+		display: flex;
+	}
+	.formulario{
+		width: 80%;
+		align-content: center;
+	}
+	.tabla{
+		margin-top: 55%;
+	}
+	tr{
+  	background-color: #fff;
+	}
 
 }

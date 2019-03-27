@@ -1,0 +1,70 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	background-image: url(182637.jpg);
+	width: 100%;
+	height: 100%;
+}
+.reponsive{
+	width: 100%;
+	height: 100%;
+}
+.imagen_header{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.formulario{
+	font-family: 'Nunito', sans-serif;
+	position: absolute;
+	top:15%;
+	left: 5%;
+	background-color:#B09DB9;
+	padding: 3%;
+	border-radius: 7px;
+	display: inline-table;
+	height: 50%;
+	width: 50%;
+}
+input{
+	border-radius: 5px;
+}
+select{
+	border-radius: 5px;
+}
+.enviar{
+	background: #dfe6f2;
+}
+table{
+	max-width: 90%;
+}
+.tabla{
+	font-family: 'Nunito', sans-serif;
+	position: relative;
+	display: flex;
+}
+tr{
+	width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 5px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: #010101;
+}
+@media screen(min-width: 800px) {
+	body{
+		background-image: url(182637.jpg);
+	}
+}
