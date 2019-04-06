@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="miaw2/estilos1.css">
+
+    <title>FORMULARIO</title>
+  </head>
+  <body>
+    <div class="container-fluid" id="header">
+      <form class="formulario lol">
+          <select class="tipo">
+            <option>Tipo de Documento</option>
+            <option>Targeta de Identidad</option>
+            <option>Cedula de Ciudadania</option>
+            <option>Cedula Extrangera</option>
+            <option>Otro</option>
+          </select>
+          
+          <input type="number" name="Numero de Documento" placeholder="Numero de Documento" class="num_docu">
+          <input type="text" name="Nombre" placeholder="Nombre" class="nom">
+          <input type="text" name="Apellidos" placeholder="Apellidos" class="ape">
+          <input type="date" name="Fecha de nacimiento" placeholder="Fecha de nacimiento" class="fe">
+          <input type="text" name="Direccion" placeholder="Direccion" class="di">
+          <input type="number" name="Email" placeholder="Email" class="em">
+          <select class="apa">
+            <option>Apartamento</option>
+            <option>Bogota</option>
+            <option>Boyaca</option>
+            <option>Antioquia</option>
+          </select><br>
+          <input type="e-mail" name="email" placeholder="Email"><br>
+          <input type="submit" value="Enviar" class="enviar">
+            </form>
+            <script>
+window.onload=function(){
+ 
+ 
+var persona = new Array();
+ 
+ 
+document.getElementById("btnInsertar").addEventListener("click",insertar);
+//document.getElementById("btnMostrar").addEventListener("click",mostrarArray);
+ 
+  function insertar(){
+ 
+ 
+    var Tipo=document.getElementById("txtCod").value;
+ 
+    var nombre=document.getElementById("txtNom").value;
+ 
+    var nota=parseFloat(document.getElementById("txtNota").value);
+ 
+ 
+    persona.push({ 'codigo': codigo, 'nombre': nombre});
+    document.getElementById("txtCod").value="";
+    document.getElementById("txtNom").value="";
+    document.getElementById("txtNota").value="";
+ 
+    mostrarTabla();
+ 
+  }
+ 
+ 
+ 
+  function mostrarTabla(){
+ 
+  var tabla=document.createElement("table");
+  var fila;
+  var celda;
+  for(var i=0;i<persona.length;i++){
+ 
+    var fila=document.createElement("tr");
+ 
+    var celda=document.createElement("td");
+ 
+    celda.appendChild(document.createTextNode(persona[i].codigo));
+    celda.appendChild(document.createTextNode(persona[i].nombre));
+    celda.appendChild(document.createTextNode(persona[i].nombre));
+ 
+    fila.appendChild(celda)
+ 
+    tabla.appendChild(fila);
+  }
+ 
+  document.body.appendChild(tabla);
+ 
+}
+ 
+ 
+}
+</script>
+  </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
